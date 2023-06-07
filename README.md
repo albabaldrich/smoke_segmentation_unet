@@ -2,11 +2,11 @@
 The folder structure for this U-Net algorithm application is the following:
 - smoke_dataset
     - train (175 images - afterward divided into 90% train and 10% test)
-        -images
-        -masks
+        - images
+        - masks
     - test (15 images)
-        -images
-        -masks
+        - images
+        - masks
 
 - video_dataset
 
