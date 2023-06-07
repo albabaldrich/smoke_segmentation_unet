@@ -12,7 +12,7 @@ if __name__ == "__main__":
         
     cfg = LoadParams('experiments/'+ EXPERIMENT + '.json')
     os.environ["CUDA_VISIBLE_DEVICES"]=cfg["CUDA_VISIBLE_DEVICES"]
-    os.environ["WANDB_API_KEY"] = 'WRITE WANDB KEY'
+    os.environ["WANDB_API_KEY"] = 'WRITE YOUR WANDB KEY'
     wandb.login()
 
     TrainDataset, ValDataset = CrearDataset(cfg)
