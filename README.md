@@ -16,10 +16,13 @@ The folder structure for this U-Net algorithm application is the following:
 
 - code
     - main.py
+    - prediction_output.py
     - utils.py
     - dataset.py
     - unet_model.py
+    - unet_model_original.py
     - train.py
+    - hyper_search.py
     - predict.py
     - evaluation.py
     - video_prediction.py
