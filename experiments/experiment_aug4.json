@@ -1,0 +1,21 @@
+{
+    "train_path": "/home/ALBA/unet/smoke_dataset/train/",
+    "test_path": "/home/ALBA/unet/smoke_dataset/test/",
+    "num_augmentations": 4,
+    "pretrained_encoder": "ResNet50",
+    "batch_size": 16,
+    "learning_rate": 0.0001,
+    "lr_scheduler": "None",
+    "num_epochs": 100,
+    "img_width": 256,
+    "img_height": 256,
+    "img_channels": 3,
+    "n_classes": 1,
+    "test_size": 0.1,
+    "weight_path": "/home/ALBA/unet/output/weights/",
+    "model_path": "/home/ALBA/unet/output/model/",
+    "best_model_path": "/home/ALBA/unet/output/best_model/",
+    "save_every_epoch": 10,
+    "CUDA_VISIBLE_DEVICES": "1",
+    "dropout":0
+}

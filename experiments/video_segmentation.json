@@ -1,0 +1,12 @@
+{
+    "video_name": "Napi1",
+    "form_video": ".mp4",
+    "form_img": ".jpg",
+    "model_name": "experiment_drop5.h5",
+
+    "output": "/home/ALBA/unet/output/video",
+    "video_dataset": "/home/ALBA/unet/video_dataset",
+    "model_path": "/home/ALBA/unet/output/model/",
+
+    "CUDA_VISIBLE_DEVICES": "0"
+}
