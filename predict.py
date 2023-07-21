@@ -113,3 +113,31 @@ def SavePredictions_new(model, dataset, cfg, save_dir):
         # Save the figure
         plt.savefig(os.path.join(save_dir, f'prediction_{cfg["test_name"]}_{i:03d}.png'))
         plt.close()
+
+def Save_only_predict(model, dataset, cfg, save_dir):
+    images = dataset['images']
+    threshold = 0.5
+
+    predictions = model.predict(images, verbose=1)
+    predictions = (predictions > threshold)
+    # Create a directory to save the predictions
+    os.makedirs(save_dir, exist_ok=True)
+
+    for i, (image, preds) in enumerate(zip(images, predictions)):
+        # Rescale the image, mask, and prediction values
+        image = (image*255).astype(np.uint8)
+        preds = (preds * 255.0).astype(np.uint8)
+
+        #fig, ax = plt.subplots(1, 1, figsize=(5, 5))
+        #fig, ax = plt.subplots()
+        #fig.suptitle('Prediction for model of ' + experiment + ' from ' + pred_data + ' dataset', fontweight="bold", size=15)
+
+        '''Predicted mask'''
+        plt.imshow(preds.squeeze())
+        #ax.set_title('Predicted mask')
+        plt.axis('off')
+       # plt.margins(x=0)
+
+        # Save the figure
+        plt.savefig(os.path.join(save_dir, f'prediction_{cfg["test_name"]}_{i:03d}.png'), bbox_inches='tight', pad_inches=0)
+        plt.close()
