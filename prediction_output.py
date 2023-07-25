@@ -13,8 +13,6 @@ if __name__ == "__main__":
     
     cfg = LoadParams('experiments/'+ EXPERIMENT + '.json')
     os.environ["CUDA_VISIBLE_DEVICES"]=cfg["CUDA_VISIBLE_DEVICES"]
-  #  os.environ["WANDB_API_KEY"] = '665e68bb4dd1224ff5144638d4a66a290f925520'
-  #  wandb.login()
    
     model = LoadModel(cfg)
 
